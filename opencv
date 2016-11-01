@@ -1,2 +1,16 @@
 Config the opencv for VS2013 on the winows 8 platform
-1. 
+1. download the newst version of the opencv on the website;
+2. Extract the zip file to the named path on the local system;
+3. config the system path，build an avariable of system path such as OPENCV, 
+   and the values is the named path like D:\opencv2.4.13\opencv\build.Then 
+   append the string value of at the end of the system path such as %OPENCV%\\x86\vc12\bin;
+   The next step is to logout and login.
+4. config the property mananger of VS2013, set include file to 
+    D:\opencv2.4.13\opencv\build\include
+    D:\opencv2.4.13\opencv\build\include\opencv,
+    D:\opencv2.4.13\opencv\build\include\opencv2.And set the library file to
+    D:\opencv2.4.13\opencv\build\x86\vc12\lib.The last set the Additional dependency that locate 
+    at the input of Linker to the all of name from the path D:\opencv2.4.13\opencv\build\x86\vc12\lib.
+    If the property mananger is debug, set the Additional dependency to the name including the char of d.
+    In contrast, set the Additional dependency to the name that don't contain the char of d.
+5. Finally enjoy yourself.
